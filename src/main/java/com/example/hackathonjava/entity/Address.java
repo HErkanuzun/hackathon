@@ -1,16 +1,20 @@
 package com.example.hackathonjava.entity;
 
 
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.w3c.dom.Text;
 
-@Getter
-@Setter
+import javax.persistence.*;
+
+
 @Entity
 @Table(name = "address")
 public class Address {
+    public Long getId() {
+        return id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

@@ -1,4 +1,4 @@
 package com.example.hackathonjava.dao;
 
-public class AddressDao {
+public interface IAddressDao {
 }
