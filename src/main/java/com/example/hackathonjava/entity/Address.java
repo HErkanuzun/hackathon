@@ -1,15 +1,19 @@
 package com.example.hackathonjava.entity;
 
 
-import lombok.Getter;
-import lombok.Setter;
-import org.w3c.dom.Text;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 
-
+@Data
+@ToString
+@JsonIgnoreProperties
+@JsonInclude
 @Entity
-@Table(name = "address")
+@Table(name = "addresses")
 public class Address {
     public Long getId() {
         return id;
@@ -51,4 +55,47 @@ public class Address {
 
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public void setDistrict(String district) {
+        this.district = district;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 }

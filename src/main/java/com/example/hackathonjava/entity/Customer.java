@@ -15,7 +15,7 @@ import java.util.Set;
 @JsonIgnoreProperties
 @JsonInclude
 @Entity
-@Table(name = "customer")
+@Table(name = "customers")
 public class Customer {
 
     @Id
@@ -24,7 +24,7 @@ public class Customer {
     private Long id;
 
 
-    @Column(name = "mail", nullable = false)
+    @Column(unique = true, name = "mail", nullable = false)
     private String mail;
 
     @Column(name = "password",  nullable = false)

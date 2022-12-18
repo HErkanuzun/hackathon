@@ -19,14 +19,14 @@ public class CustomerDao implements ICustomerDao{
     }
 
     @Override
-    public void create(Customer customer) {
+    public void create(Customer c) {
 
-        customerRepository.save(customer);
+        customerRepository.save(c);
     }
 
     @Override
-    public void update(Customer customer) {
-        customerRepository.save(customer);
+    public void update(Customer c) {
+        customerRepository.save(c);
     }
 
     @Override
